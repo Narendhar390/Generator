@@ -1,5 +1,5 @@
 import streamlit as st
-from st_copy_to_clipboard import st_copy_to_clipboard
+from streamlit_copy_to_clipboard import streamlit_copy_to_clipboard
 from generator import generate_content
 st.set_page_config(
     page_title="AI Content Generator",
@@ -69,7 +69,7 @@ if generate:
             st.error(content)
         else:
             st.markdown(content)
-            st_copy_to_clipboard(content)
+            streamlit_copy_to_clipboard(content)
             st.markdown("""
                         <script>
                         document.getElementById("output").scroolIntoView({
