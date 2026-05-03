@@ -3,7 +3,7 @@ from groq import Groq
 import os
 load_dotenv()
 client=Groq(
-    api_key=os.getenv("OPEN_API_KEY")
+    api_key=os.getenv("GROQ_API_KEY")
 )
 def generate_content(topic,content_type,tone,word_limit,extra_instruction):
     prompt=f"""
